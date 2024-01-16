@@ -1,0 +1,24 @@
+.paddingall {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid red;
+}
+
+.pricetitle {
+  font-weight: 600;
+  border: 1px solid red;
+}
+
+.pricesubtitle {
+  font-size: 14px;
+  
+}
+
+.iconstyle {
+  border: 1px solid red;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.gradient {
+  border: 1px solid red;
+}
