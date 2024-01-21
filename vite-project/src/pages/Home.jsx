@@ -13,11 +13,16 @@ import { Stack } from "@mui/material";
 import "../Dash.css";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import PaymentsIcon from '@mui/icons-material/Payments';
+import  AccordionUsage from "../components/AccordionUsage";
+import BarChart from "../charts/BarChart";
+import CountUp from 'react-countup';
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <> 
+    
+    <div className="bgcolor">
+    <Navbar />
       <Box heigth={30} />
       <Box
         sx={{
@@ -25,7 +30,9 @@ export default function Home() {
           flexDirection: "row",
           justifyContent: "space-between",
           gap: 2,
-          width: "98vw",
+          width: "100vw",
+          height: "100vh",
+
         }}
       >
         <Sidenav />
@@ -53,7 +60,7 @@ export default function Home() {
                   </div>
                   <div className="paddingall">
                     <Typography gutterBottom variant="h5" component="div">
-                      R$ 785.00
+                      R$ <CountUp delay={0.2} end={1785} duration={0.3} />
                     </Typography>
                     <Typography gutterBottom variant="body2" component="div">
                       Ganhos totais
@@ -68,7 +75,7 @@ export default function Home() {
                   </div>
                   <div className="paddingall">
                   <Typography gutterBottom variant="h5" component="div">
-                      R$ 785.00
+                    R$ <CountUp delay={0.2} end={785} duration={0.3} />
                     </Typography>
                     <Typography gutterBottom variant="body2" component="div">
                       Ordem total
@@ -124,9 +131,7 @@ export default function Home() {
             <Grid sx={{ display: "flex", gap: 2, width: "93%" }}>
               <Card sx={{ width: "100%" }}>
                 <CardContent>
-                  <Typography variant="h5" component="div">
-                    3
-                  </Typography>
+                  <BarChart />
                 </CardContent>
               </Card>
             </Grid>
@@ -139,17 +144,21 @@ export default function Home() {
                 width: "50%",
               }}
             >
-              <Card sx={{ height: "280px" }}>
+              <Card sx={{ height: "350px" }}>
                 <CardContent>
-                  <Typography variant="h5" component="div">
-                    4
-                  </Typography>
+                <div className="paddingall">
+                    <span className="pricetitle">Produtos Populares</span>
+                    
+                  </div>
+                  <AccordionUsage />
                 </CardContent>
               </Card>
             </Grid>
           </Box>
         </Container>
       </Box>
+    </div>
+      
     </>
   );
 }

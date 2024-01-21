@@ -74,7 +74,7 @@ export default function Sidenav() {
 
     return (
         <Box sx={{ display: 'flex' }}>
-           
+            < CssBaseline />
 
             <Box heigth={30} />
             <Drawer variant="permanent" open={open}>
@@ -105,7 +105,7 @@ export default function Sidenav() {
                             <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem  disablePadding sx={{ display: 'block' }}onClick={()=>{navigate("/about")}}>
+                    <ListItem  disablePadding sx={{ display: 'block' }}onClick={()=>{navigate("/products")}}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -122,7 +122,7 @@ export default function Sidenav() {
                             >
                             <InboxIcon /> 
                             </ListItemIcon>
-                            <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+                            <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem  disablePadding sx={{ display: 'block' }}onClick={()=>{navigate("/settings")}}>
